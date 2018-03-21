@@ -3,7 +3,7 @@
      <section class="section">
        <div class="container">
             <figure class="image">
-              <img src="src/assets/chin9.png">
+              <img src="../assets/chin9.png">
             </figure>
             <p class="title is-3">OVER 220 YEARS OF INNOVATION, PASSION AND EXPERTISE...</p>
             <a class="button is-info is-pulled-right">Vuew our Spring lounch  ></a>
@@ -17,7 +17,7 @@
       <div class="column">
         <section class=" box is-paddingless">
           <figure class="image">
-            <img src="src/assets/Collection/col4.jpg">
+            <img src="../assets/Collection/col4.jpg">
             <br>
           </figure>
           <p class="title is-4">New Studio Prints Stone</p>
@@ -26,7 +26,7 @@
       <div class="column">
         <section class="box is-paddingless">
           <figure class="image">
-            <img src="src/assets/Collection/col6.jpg">
+            <img src="../assets/Collection/col6.jpg">
             <br>
           </figure>
           <p class="title is-4">New Studio Prints Stone</p>
@@ -35,7 +35,7 @@
       <div class="column ">
         <section class="box is-paddingless">
           <figure class="image">
-            <img src="src/assets/Collection/col5.jpg">
+            <img src="../assets/Collection/col5.jpg">
             <br>
           </figure>
           <p class="title is-4">New Studio Prints </p>
@@ -58,7 +58,7 @@
       </div>
       <div class="column ">
           <figure class="image">
-            <img src="src/assets/wh1.png">
+            <img src="../assets/wh1.png">
           </figure>
       </div>
     </div>

@@ -2,7 +2,7 @@
   <div class="about">
     <div class="container">
       <figure class="image">
-        <img src="src/assets/chin9.png">
+        <img src="../assets/chin9.png">
       </figure>
       <p class="title is-3">ATLANTIC</p>
       <a class="title is-6">Animate the Tabletop</a>
@@ -12,11 +12,11 @@
 <div class="container">
   <div class="columns">
     <!-- Filters column -->
-    <div class="column">
+    <div class="column is-3">
       <section class="box">
         <p class="title is-5">TYPE</p>
         <label class="checkbox">
-          <input type="checkbox">
+          <input type="checkbox" v-on:click="onTypeClick">
           Plates (3)
         </label>
         <br>
@@ -99,57 +99,23 @@
     </div>
 
     <!-- Plates column -->
-    <div class="column">
-
-
-      <section class="box is-paddingless has-text-centered" v-for="plate in plates">
-        {{ plate.size }}
-        <figure class="image">
-          <img :src="plate.image_url">
-          <br>
-        <p class="title is-5">{{ plate.name }}</p>
-        {{ plate.image_url }}
-        <br>
-        </figure>
-      </section>
-
-      <section class="box is-paddingless has-text-centered">
-        <figure class="image">
-          <img src="src/assets/Collection/col8.png">
-          <br>
-        <p class="title is-5">LARGE PLATE</p>
-        <br>
-        </figure>
-        </section>
-        <section class="box is-paddingless has-text-centered">
-          <figure class="image">
-            <img src="src/assets/Collection/col8.png">
+    <div class="column is-9">
+      <div class="columns is-multiline">
+        <div class="column is-6" v-for="plate in plates">
+          <section class="box is-paddingless has-text-centered">
+            <figure class="image">
+              <img :src="plate.image_url">
+              <br>
+            <p class="title is-5">{{ plate.name }}</p>
+            {{ plate.image_url }}
             <br>
-          <p class="title is-5">LARGE BOWL</p>
-          <br>
-          </figure>
+            {{ plate.size }}
+            </figure>
           </section>
+        </div>
+      </div>
     </div>
-    <div class="column">
-      <section class="box is-paddingless has-text-centered">
-        <figure class="image">
-          <img src="src/assets/Collection/col8.png">
-          <br>
-        <p class="title is-5">MEDIUM PLATE</p>
-        <br>
-        </figure>
-        </section>
-    </div>
-    <div class="column">
-      <section class="box is-paddingless has-text-centered">
-        <figure class="image">
-          <img src="src/assets/Collection/col8.png">
-          <br>
-        <p class="title is-5">SMALL PLATE</p>
-        <br>
-        </figure>
-        </section>
-    </div>
+
     <br>
   </div>
 </div>
@@ -160,33 +126,56 @@
 <script>
 export default {
   name: 'Skills',
+  methods: {
+    onTypeClick: function (event) {
+      let filterPlates = []
+      for(let plate of this.plates) {
+        if (plate.size == "20-30") {
+             filterPlates.push(plate)
+        }
+      }
+      this.plates = filterPlates
+    }
+  },
   data() {
     var myPlates = []
 
     var plate1 = {
       name: "Large plate",
-      image_url: "src/assets/Collection/col8.png",
+      image_url: "../assets/Collection/col8.png",
       type: "Plates",
       size: "20-30"
     }
 
     var plate2 = {
       name: "Medium plate",
-      image_url: "src/assets/Collection/col9.jpg",
+      image_url: "../assets/Collection/col9.jpg",
+      type: "Plates",
+      size: "10-20"
+    }
+
+    var plate3 = {
+      name: "Large plate",
+      image_url: "../assets/Collection/col8.png",
+      type: "Plates",
+      size: "20-30"
+    }
+
+    var plate4 = {
+      name: "Medium plate",
+      image_url: "../assets/Collection/col9.jpg",
       type: "Plates",
       size: "10-20"
     }
 
     myPlates.push(plate1)
     myPlates.push(plate2)
+    myPlates.push(plate3)
+    myPlates.push(plate4)
 
     console.log(myPlates);
     return {
-      plates: myPlates,
-      items: [
-         { message: 'Foo' },
-         { message: 'Bar' }
-       ]
+      plates: myPlates
     }
   }
 }

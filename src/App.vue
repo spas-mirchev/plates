@@ -3,7 +3,7 @@
     <header class="level container is-center">
       <div class="level-left">
         <figure class="image is-64x64">
-          <img src="src/assets/logo.png">
+          <img src="./assets/logo.png">
         </figure>
           <h1 class="title is-4">Robocop</h1>
         </div>

@@ -3,7 +3,7 @@
     <section class="section">
       <div class="container">
            <figure class="image">
-             <img src="src/assets/Collection/robo.jpg">
+             <img src="../assets/Collection/robo.jpg">
            </figure>
            <p class="title is-3">OUR COLLECTIONS </p>
            <a class="button is-info is-pulled-right">About Robocop></a>
@@ -20,32 +20,30 @@
           <div class="column">
             <section class=" box is-paddingless ">
               <figure class="image">
-                <img src="src/assets/Collection/col1.jpg">
+                <img src="../assets/Collection/col1.jpg">
               </figure>
               <figure class="is-128x128 has-text-centered">
-                <img src="src/assets/Collection/logo1.png">
+                <img src="../assets/Collection/logo1.png">
               </figure>
             </section>
           </div>
           <div class="column">
             <section class=" box is-paddingless ">
               <figure class="image">
-                <img src="src/assets/Collection/col2.jpg">
+                <img src="../assets/Collection/col2.jpg">
               </figure>
               <figure class="iimage is-128x128 has-text-centered">
-                <img src="src/assets/Collection/logo2.png">
+                <img src="../assets/Collection/logo2.png">
               </figure>
             </section>
           </div>
           <div class="column ">
             <section class=" box is-paddingless ">
               <figure class="image">
-                <img src="src/assets/Collection/col3.jpg">
+                <img src="../assets/Collection/col3.jpg">
               </figure>
-              <br>
               <figure class="iimage is-128x128 has-text-centered">
-                <img src="src/assets/Collection/logo3.jpg">
-                <br>
+                <img src="../assets/Collection/logo3.jpg">
               </figure>
             </section>
           <br>
@@ -56,30 +54,30 @@
               <div class="column">
                 <section class=" box is-paddingless ">
                   <figure class="image">
-                    <img src="src/assets/Collection/col1.jpg">
+                    <img src="../assets/Collection/col1.jpg">
                   </figure>
                   <figure class="iimage is-128x128 has-text-centered">
-                    <img src="src/assets/Collection/logo1.png">
+                    <img src="../assets/Collection/logo1.png">
                   </figure>
                 </section>
               </div>
               <div class="column">
                 <section class=" box is-paddingless ">
                   <figure class="image">
-                    <img src="src/assets/Collection/col2.jpg">
+                    <img src="../assets/Collection/col2.jpg">
                   </figure>
                   <figure class="iimage is-128x128 has-text-centered">
-                    <img src="src/assets/Collection/logo2.png">
+                    <img src="../assets/Collection/logo2.png">
                   </figure>
                 </section>
               </div>
               <div class="column ">
                 <section class=" box is-paddingless ">
                   <figure class="image">
-                    <img src="src/assets/Collection/col3.jpg">
+                    <img src="../assets/Collection/col3.jpg">
                   </figure>
                   <figure class="is-128x128 has-text-centered">
-                    <img src="src/assets/Collection/logo3.jpg">
+                    <img src="../assets/Collection/logo3.jpg">
                   </figure>
                 </section>
               <br>
