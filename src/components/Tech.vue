@@ -123,10 +123,8 @@
 </template>
 
 <script>
+var Itemsjs = require('itemsjs')
 
-const itemsjs = require('itemsjs')(data, configuration);
-// const items = itemsjs.search();
-// console.log(items);
 const data = require('./data.json');
 
 var configuration =  {
@@ -160,8 +158,9 @@ var configuration =  {
   },
   searchableFields: ['name', 'colour']
 };
-// console.log(data);
-// console.log(configuration);
+
+var itemsjs = Itemsjs(data, configuration);
+
 export default {
   name: 'Tech',
   data () {
@@ -185,7 +184,8 @@ export default {
         query: this.query,
         filters: this.filters
       })
-      console.log(result.data.aggregations);
+
+      console.log(result);
       return result
     }
   }
