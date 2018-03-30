@@ -5,6 +5,7 @@ import Skills from '@/components/Skills'
 import About from '@/components/About'
 import Login from '@/components/Login'
 import Horeca from '@/components/Horeca'
+import Tech from '@/components/Tech'
 
 Vue.use(Router)
 
@@ -34,11 +35,11 @@ export default new Router({
       path: '/Horeca',
       name: 'Horeca',
       component: Horeca
+    },
+    {
+      path: '/Tech',
+      name: 'Tech',
+      component: Tech
     }
-    // {
-    //   path: '/Tech',
-    //   name: 'Tech',
-    //   component: Tech
-    // }
   ]
 })

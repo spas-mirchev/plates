@@ -1,0 +1,64 @@
+[
+  {
+
+    "name": "Standart rim",
+    "image_url": "../assets/Collection/col8.png",
+    "type": ["Plates","Bows","Accessories"],
+    "size": ["10-20", "20-30", "30-40", "40-50"],
+    "shape": ["Round", "Oval","Square"],
+    "capacity": ["0-10","20-30", "30.40", "50-60","60-70"],
+    "colour": ["white"]
+    },
+
+
+    {
+    "name": "Medium rim",
+    "image_url": "../assets/Collection/col8.png",
+    "type": ["Plates","Bows","Accessories"],
+    "size": ["10-20", "20-30", "30-40", "40-50"],
+    "shape": ["Round", "Oval","Square"],
+    "capacity": ["0-10","20-30", "30.40", "50-60","60-70"],
+    "colour": ["white"]
+  },
+
+    {
+    "name": "Large rim",
+    "image_url": "../assets/Collection/col8.png",
+    "type": ["Plates","Bows","Accessories"],
+    "size": ["10-20", "20-30", "30-40", "40-50"],
+    "shape": ["Round", "Oval","Square"],
+    "capacity": ["0-10","20-30", "30.40", "50-60","60-70"],
+    "colour": ["white"]
+  },
+
+   {
+    "name": "Standart bowl",
+    "image_url": "require(../assets/Collection/col8.png)",
+    "type": ["Plates","Bows","Accessories"],
+    "size": ["10-20", "20-30", "30-40", "40-50"],
+    "shape": ["Round", "Oval","Square"],
+    "capacity": ["0-10","20-30", "30.40", "50-60","60-70"],
+    "colour": ["white"]
+  },
+
+  {
+    "name": "Medium bowl",
+    "image_url": "../assets/Collection/col8.png",
+    "type": ["Plates","Bows","Accessories"],
+    "size": ["10-20", "20-30", "30-40", "40-50"],
+    "shape": ["Round", "Oval","Square"],
+    "capacity": ["0-10","20-30", "30.40", "50-60","60-70"],
+    "colour": ["white"]
+  },
+
+   {
+    "name": "Large bowl",
+    "image_url": "../assets/Collection/col8.png",
+    "type": ["Plates","Bows","Accessories"],
+    "size": ["10-20", "20-30", "30-40", "40-50"],
+    "shape": ["Round", "Oval","Square"],
+    "capacity": ["0-10","20-30", "30.40", "50-60","60-70"],
+    "colour": ["white"]
+  }
+
+]

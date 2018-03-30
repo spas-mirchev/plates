@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import 'bulma/css/bulma.css';
 import VeeValidate from 'vee-validate';
+import 'itemsjs/dist/itemsjs.js';
 import router from './router'
 
 Vue.use(VeeValidate);

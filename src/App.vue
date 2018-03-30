@@ -59,7 +59,7 @@
         </div>
       </div>
     <p class="level-item has-text-centered is-size-5">
-      <router-link to="/Helloworld">About</router-link>
+      <router-link to="/About">About</router-link>
     </p>
     </p>
     <p class="level-item has-text-centered is-size-5">

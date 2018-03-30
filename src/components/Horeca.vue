@@ -16,8 +16,8 @@
       <section class="box">
         <p class="title is-5">TYPE</p>
         <label class="checkbox">
-          <input type="checkbox" v-on:click="onTypeClick">
-          Plates (3)
+          <input type="checkbox">
+          Plates (6)
         </label>
         <br>
         <label>
@@ -39,33 +39,14 @@
       </section>
       <section class="box">
         <p class="title is-5">SIZE (CM)</p>
-        <label class="checkbox">
-          <input type="checkbox">
-          0–10 (2)
-        </label>
-        <br>
-        <label>
-          <input type="checkbox">
-         10–20 (6)
-        </label>
-        <br>
-        <label class="checkbox">
-          <input type="checkbox">
-          20–30 (6)
-        </label>
-        <br>
-        <label>
-          <input type="checkbox">
-         30–40 (1)
+        <label v-for = "size in getSizes()">
+          <input type="checkbox" :size="size"  @click="onTypeClick" >
+          {{size}}
+          <br>
         </label>
       </section>
       <section class="box">
         <p class="title is-5">CAPACITY (CL)</p>
-        <label class="checkbox">
-          <input type="checkbox">
-          0–10 (2)
-        </label>
-        <br>
         <label>
           <input type="checkbox">
          10–20 (6)
@@ -101,13 +82,11 @@
     <!-- Plates column -->
     <div class="column is-9">
       <div class="columns is-multiline">
-        <div class="column is-6" v-for="plate in plates">
+        <div class="column is-one-third" v-for = "plate in plates">
           <section class="box is-paddingless has-text-centered">
             <figure class="image">
               <img :src="plate.image_url">
-              <br>
             <p class="title is-5">{{ plate.name }}</p>
-            {{ plate.image_url }}
             <br>
             {{ plate.size }}
             </figure>
@@ -128,54 +107,78 @@ export default {
   name: 'Skills',
   methods: {
     onTypeClick: function (event) {
-      let filterPlates = []
-      for(let plate of this.plates) {
-        if (plate.size == "20-30") {
-             filterPlates.push(plate)
-        }
+      console.log(event)
+      if (event.target.checked) {
+        let currentSize = event.target.getAttribute("size")
+        this.plates = this.plates.filter(plate => plate.size == currentSize)
+      } else {
+        this.plates = this.allPlates
       }
-      this.plates = filterPlates
+    },
+    getSizes: function () {
+
+      let plateSizes = this.plates.map(plate => plate.size)
+      let unique = [...new Set(plateSizes)].sort();
+      return unique
     }
+
   },
   data() {
     var myPlates = []
 
     var plate1 = {
-      name: "Large plate",
-      image_url: "../assets/Collection/col8.png",
+      name: "Standart",
+      image_url: require("../assets/Collection/col8.png"),
       type: "Plates",
-      size: "20-30"
+      size: "10-20"
     }
 
     var plate2 = {
       name: "Medium plate",
-      image_url: "../assets/Collection/col9.jpg",
-      type: "Plates",
-      size: "10-20"
-    }
-
-    var plate3 = {
-      name: "Large plate",
-      image_url: "../assets/Collection/col8.png",
+      image_url: require("../assets/Collection/col8.png"),
       type: "Plates",
       size: "20-30"
     }
 
+    var plate3 = {
+      name: "Large plate",
+      image_url: require("../assets/Collection/col8.png"),
+      type: "Plates",
+      size: "30-40"
+    }
+
     var plate4 = {
-      name: "Medium plate",
-      image_url: "../assets/Collection/col9.jpg",
+      name: "Standart",
+      image_url: require("../assets/Collection/col8.png"),
       type: "Plates",
       size: "10-20"
+    }
+
+    var plate5 = {
+      name: "Medium plate",
+      image_url: require("../assets/Collection/col8.png"),
+      type: "Plates",
+      size: "20-30"
+    }
+
+    var plate6 = {
+      name: "Large plate",
+      image_url: require("../assets/Collection/col8.png"),
+      type: "Plates",
+      size: "30-40"
     }
 
     myPlates.push(plate1)
     myPlates.push(plate2)
     myPlates.push(plate3)
     myPlates.push(plate4)
+    myPlates.push(plate5)
+    myPlates.push(plate6)
 
-    console.log(myPlates);
+    // console.log(myPlates);
     return {
-      plates: myPlates
+      plates: myPlates,
+      allPlates: myPlates
     }
   }
 }
