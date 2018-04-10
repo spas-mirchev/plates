@@ -128,7 +128,7 @@ export default {
 
     var plate1 = {
       name: "Standart",
-      image_url: require("../assets/Collection/col8.png"),
+      image_url: require('../assets/Collection/col8.png'),
       type: "Plates",
       size: "10-20"
     }

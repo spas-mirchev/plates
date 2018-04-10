@@ -1,50 +1,52 @@
 [
   {
 
+    "id": 1,
     "name": "Standart rim",
-    "image_url": "../assets/Collection/col8.png",
-    "type": ["Plates","Bows","Accessories"],
+    "image_url": "Collection/col8.png",
+    "type": ["Plates"],
     "size": ["10-20", "20-30", "30-40", "40-50"],
     "shape": ["Round", "Oval","Square"],
-    "capacity": ["0-10","20-30", "30.40", "50-60","60-70"],
+    "capacity": ["0-10"],
     "colour": ["white"]
     },
 
 
     {
+    "id": 2,
     "name": "Medium rim",
-    "image_url": "../assets/Collection/col8.png",
-    "type": ["Plates","Bows","Accessories"],
+    "image_url": "Collection/col8.png",
+    "type": ["Plates"],
     "size": ["10-20", "20-30", "30-40", "40-50"],
     "shape": ["Round", "Oval","Square"],
-    "capacity": ["0-10","20-30", "30.40", "50-60","60-70"],
-    "colour": ["white"]
+    "capacity": ["20-30"],
+    "colour": ["white"] 
   },
 
     {
     "name": "Large rim",
-    "image_url": "../assets/Collection/col8.png",
-    "type": ["Plates","Bows","Accessories"],
+    "image_url": "Collection/col8.png",
+    "type": ["Plates"],
     "size": ["10-20", "20-30", "30-40", "40-50"],
     "shape": ["Round", "Oval","Square"],
-    "capacity": ["0-10","20-30", "30.40", "50-60","60-70"],
+    "capacity": ["30.40"],
     "colour": ["white"]
   },
 
    {
-    "name": "Standart bowl",
-    "image_url": "require(../assets/Collection/col8.png)",
-    "type": ["Plates","Bows","Accessories"],
+    "name": "Standart bowl martin",
+    "image_url": "Collection/col8.png",
+    "type": ["Bows"],
     "size": ["10-20", "20-30", "30-40", "40-50"],
-    "shape": ["Round", "Oval","Square"],
-    "capacity": ["0-10","20-30", "30.40", "50-60","60-70"],
+    "shape": ["Oval"],
+    "capacity": ["50-60"],
     "colour": ["white"]
   },
 
   {
     "name": "Medium bowl",
-    "image_url": "../assets/Collection/col8.png",
-    "type": ["Plates","Bows","Accessories"],
+    "image_url": "Collection/col8.png",
+    "type": ["Bows"],
     "size": ["10-20", "20-30", "30-40", "40-50"],
     "shape": ["Round", "Oval","Square"],
     "capacity": ["0-10","20-30", "30.40", "50-60","60-70"],
@@ -53,8 +55,8 @@
 
    {
     "name": "Large bowl",
-    "image_url": "../assets/Collection/col8.png",
-    "type": ["Plates","Bows","Accessories"],
+    "image_url": "Collection/col8.png",
+    "type": ["Bows"],
     "size": ["10-20", "20-30", "30-40", "40-50"],
     "shape": ["Round", "Oval","Square"],
     "capacity": ["0-10","20-30", "30.40", "50-60","60-70"],

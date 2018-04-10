@@ -9,8 +9,12 @@
         <a class="title is-6">Animate the Tabletop</a>
         <br>
   </div>
-  <h1>List of items ({{ searchResult.pagination.total }})</h1>
+  <br>
+
     <div class="container">
+      <div class="columns">
+    <!-- Filters column -->
+    <div class="column is-3">
     <div v-for="facet in searchResult.data.aggregations">
       <h5 style="margin-bottom: 5px;"><strong style="color: #337ab7;">{{ facet.title }}</strong></h5>
 
@@ -28,95 +32,23 @@
       </ul>
     </div>
   </div>
-  <br>
-  <div class="container">
-    <div class="columns">
-      <!-- Filters column -->
-      <div class="column is-3">
-        <section class="box">
-          <p class="title is-5">TYPE</p>
-          <label class="checkbox">
-            <input type="checkbox">
-            Plates (6)
-          </label>
-          <br>
-          <label>
-            <input type="checkbox">
-            Bowls (2)
-          </label>
-        </section>
-        <section class="box">
-          <p class="title is-5">SHAPE</p>
-          <label class="checkbox">
-            <input type="checkbox">
-            Organic (5)
-          </label>
-          <br>
-          <label>
-            <input type="checkbox">
-            Oval (9)
-          </label>
-        </section>
-        <section class="box">
-          <p class="title is-5">SIZE (CM)</p>
-          <label >
-            <input type="checkbox" >
-
+   <div class="column is-9">
+<div class="columns is-multiline">
+        <div class="column is-one-third" v-for = "item of searchResult.data.items">
+          <section class="box is-paddingless has-text-centered">
+            <figure class="image">
+              <img :src="item.image_url">
+            <p class="title is-5">{{ item.name }}</p>
             <br>
-          </label>
-        </section>
-        <section class="box">
-          <p class="title is-5">CAPACITY (CL)</p>
-          <label>
-            <input type="checkbox">
-           10–20 (6)
-          </label>
-          <br>
-          <label class="checkbox">
-            <input type="checkbox">
-            20–30 (6)
-          </label>
-          <br>
-          <label>
-            <input type="checkbox">
-           30–40 (1)
-          </label>
-          <br>
-          <label>
-            <input type="checkbox">
-           50–60 (2)
-          </label>
-          <br>
-          <label class="checkbox">
-            <input type="checkbox">
-            70–80 (1)
-          </label>
-          <br>
-          <label>
-            <input type="checkbox">
-           80–90 (1)
-          </label>
-        </section>
-      </div>
-
-      <!-- Plates column -->
-      <div class="column is-9">
-        <div class="columns is-multiline">
-          <div class="column is-one-third" >
-            <section class="box is-paddingless has-text-centered">
-              <figure class="image">
-                <img >
-              <p class="title is-5"></p>
-              <br>
-
-              </figure>
-            </section>
-          </div>
+            </figure>
+          </section>
         </div>
       </div>
-      <br>
-    </div>
+   </div>
+</div>
   </div>
+  <br>
+  
   <br>
 
 </div>
@@ -126,8 +58,18 @@
 var Itemsjs = require('itemsjs')
 
 const data = require('./data.json');
+data.find
+
+
+for( let image of data ) {
+  image.image_url = require('../assets/' + image.image_url)
+}
+
+
+
 
 var configuration =  {
+  searchableFields: [],
   sortings: {
     name_asc: {
       field: 'name',
@@ -156,7 +98,6 @@ var configuration =  {
       size: 3
     }
   },
-  searchableFields: ['name', 'colour']
 };
 
 var itemsjs = Itemsjs(data, configuration);
@@ -174,6 +115,16 @@ export default {
       query: '',
       // initializing filters with empty arrays
       filters: filters,
+    }
+  },
+  methods: {
+    reset: function () {
+      var filters = {};
+      Object.keys(configuration.aggregations).map(function(v) {
+        filters[v] = [];
+      })
+      this.filters = filters;
+      this.query = '';
     }
   },
 
